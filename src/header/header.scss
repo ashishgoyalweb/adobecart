@@ -1,0 +1,84 @@
+@import "../common.scss";
+
+header {
+  background-color: $blueBg;
+  color: $White;
+  padding: 10px 20px;
+  @include flex-manage(space-between);
+
+  .fa.fa-star {
+    color: $Yellow;
+    font-size: 20px;
+  }
+
+  .compo {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    .search {
+      margin-right: 15px;
+      cursor: pointer;
+
+      .fa.fa-search {
+        color: $White;
+        font-size: 15px;
+        padding-top: 7px;
+      }
+      .srch {
+        opacity: 0;
+      }
+
+      &:hover {
+        .srch {
+          padding: 0 5px;
+          width: 150px;
+          opacity: 1;
+        }
+      }
+      ::-webkit-input-placeholder {
+        color: $White;
+      }
+      ::-moz-placeholder {
+        color: $White;
+      }
+      :-ms-input-placeholder {
+        color: $White;
+      }
+      :-moz-placeholder {
+        color: $White;
+      }
+      .srch {
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $White;
+        transition: 0.4s;
+        width: 0;
+        color: $White;
+      }
+    }
+
+    .cart {
+      margin-top: 5px;
+      .fa.fa-shopping-cart {
+        color: $White;
+        font-size: 20px;
+      }
+      span {
+        display: inline-block;
+        background: red;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        font-size: 12px;
+        top: -10px;
+        position: relative;
+        right: 7px;
+        text-align: center;
+        line-height: 15px;
+        color: #fff;
+      }
+    }
+  }
+}

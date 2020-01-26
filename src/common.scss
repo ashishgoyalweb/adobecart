@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+$blueBg: #4368ea;
+$White: #fff;
+$Yellow: #f8d11e;
+$TweentFive: 25px;
+$Twenty: 20px;
+
+@mixin flex-manage($direction) {
+  display: flex;
+  justify-content: $direction;
+}
+.clear {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+@mixin qty($icon) {
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: $TweentFive;
+  height: $TweentFive;
+  border-radius: 50%;
+  background: $White;
+  position: relative;
+  vertical-align: middle;
+  &:after {
+    position: absolute;
+    content: $icon;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+  }
+}
+
+@mixin ruppes {
+  content: "\20B9";
+  padding-right: 1px;
+}
